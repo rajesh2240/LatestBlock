@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="block"
+            type="com.blockone.data.EachBlockInfo" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_id"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/margin_rule"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@string/block_id"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_id_value"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@{block.id}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_id" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_producer"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/large"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@string/producer"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_id_value" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_producer_value"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@{block.producer}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_producer" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_total_transactions"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/large"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@string/total_transactions"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_producer_value" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_total_transactions_value"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@{Integer.toString(block.transactions.size())}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total_transactions" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_time"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/large"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@string/time"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total_transactions_value" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_time_value"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@{block.timestamp}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_time" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_block_num"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/large"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@string/block_num"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_time_value" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_block_num_value"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_rule"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/margin_rule"
+            android:gravity="start|center_vertical"
+            android:text="@{block.producer_signature}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_block_num" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

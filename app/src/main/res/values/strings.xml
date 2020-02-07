@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Latest Block</string>
+    <string name="block_id">Block ID</string>
+    <string name="producer">Producer</string>
+    <string name="total_transactions">Total Transactions</string>
+    <string name="time">Time</string>
+    <string name="block_num">Block Signature</string>
+</resources>
